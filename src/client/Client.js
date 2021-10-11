@@ -203,7 +203,7 @@ class Client extends BaseClient {
    * client.login('my token');
    */
   async login(token = this.token) {
-    if (!token || typeof token !== 'string') throw new Error('TOKEN_INVALID-bruh');
+    if (!token || typeof token !== 'string') throw new Error('TOKEN_INVALID');
     this.token = token = token.replace(/^(Bot|Bearer)\s*/i, '');
     this.emit(
       Events.DEBUG,
