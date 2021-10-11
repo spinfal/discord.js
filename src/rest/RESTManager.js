@@ -8,7 +8,7 @@ const Collection = require('../util/Collection');
 const { Endpoints } = require('../util/Constants');
 
 class RESTManager {
-  constructor(client) {
+  constructor(client, tokenPrefix = 'Bot') {
     this.client = client;
     this.handlers = new Collection();
     this.tokenPrefix = tokenPrefix;
